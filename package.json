@@ -57,8 +57,10 @@
     "@babel/polyfill": "^7.6.0",
     "fastclick": "^1.0.6",
     "normalize.css": "^8.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "styled-components": "^5.0.0-rc.2",
     "viewar-api": "^0.56.1",
     "viewar-core": "^11.34.2"
   }
