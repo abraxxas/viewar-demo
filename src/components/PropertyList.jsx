@@ -19,7 +19,7 @@ StyledOption.propTypes = {
 };
 
 const Option = ({
-  option, handleClick, isActive, propertyName,
+  option, handleClick, isActive,
 }) => {
   const selectPropertyValue = useCallback(() => handleClick(option), [ handleClick, option ]);
 
@@ -32,7 +32,6 @@ Option.propTypes = {
   option:       PropTypes.object.isRequired,
   handleClick:  PropTypes.func.isRequired,
   isActive:     PropTypes.bool.isRequired,
-  propertyName: PropTypes.string.isRequired,
 };
 
 
@@ -48,7 +47,7 @@ export const PropertyList = ({ property, handleClick }) => {
 
   return (
     <React.Fragment>
-      {property.options.map((option) => { return <Option handleClick={selectPropertyValue} propertyName={property.name} isActive={property.value.name === option.name} key={option.key} option={option} />; })}
+      {property.options.map((option) => { return <Option handleClick={selectPropertyValue} isActive={property.value.name === option.name} key={option.key} option={option} />; })}
     </React.Fragment>
 
 
